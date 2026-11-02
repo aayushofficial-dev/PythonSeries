@@ -293,3 +293,70 @@ def count_by(x, n):
         result.append(i)
     return result
 print(count_by(3, 10))
+
+
+def order(sentence):
+    result = sentence.split()
+    return result
+print(order("is2 Thi1s T4est 3a"))
+
+
+def order(sentence):
+    if not sentence:
+        return ""
+    
+    words = sentence.split()
+    result = []
+    
+    for i in range(1, 10):
+        for word in words:
+            if str(i) in word:
+                result.append(word)
+    return " ".join(result)
+print(order("is2 Thi1s T4est 3a"))
+
+# sum of odd numbers:
+# Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+
+# 1 -->  1
+# 2 --> 3 + 5 = 8
+
+
+def row_sum_odd_numbers(n):
+    total = 0
+    result = []
+    for i in range(1, n):
+        if i % 2 == 1:
+            result.append(i)
+
+    for x, y in enumerate(result, start=1):
+        if x == y:
+            total += i
+    return total
+print(row_sum_odd_numbers(2))
+
+def row_sum_odd_numbers(n):
+    # The first number in the nth row
+    start = n * (n - 1) + 1
+    total = 0
+    
+    for i in range(n):
+        current_number = start + (i * 2)
+        # Condition to check if the number is odd (which it always will be)
+        if current_number % 2 != 0:
+            total += current_number
+            
+    return total
+print(row_sum_odd_numbers(2))
+
+# Mexican wave
+def wave(people):
+    # Code here
+    result = []
+    for i in range(len(people)):
+        if people[i].isalpha():
+            wave_str = people[:i] + people[i].upper() + people[i+ 1:]
+            result.append(wave_str)
+    return result
+print(wave('hello'))
+
