@@ -370,3 +370,13 @@ elif age <= 35:
     print('young adult')
 else:
     print('adult')
+
+
+def between(a,b):
+    # good luck
+    result = []
+    if a < b:
+        for i in range(a, b+1):
+            result.append(i)
+    return result
+print(between(1, 4))
