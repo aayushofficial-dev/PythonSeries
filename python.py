@@ -380,3 +380,19 @@ def between(a,b):
             result.append(i)
     return result
 print(between(1, 4))
+
+def sum_dig_pow(a, b): # range(a, b + 1) will be studied by the function
+    # your code here
+    result = []
+    for i in range(a, b+1):
+        total  = 0
+        for index, digit in enumerate(str(i),start=1):
+            total += int(digit) ** index
+        if total == i:
+            result.append(i)
+    return result
+print(sum_dig_pow(1, 100))
+
+def fun():
+    print('Hello aayush')
+fun()
