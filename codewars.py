@@ -425,3 +425,25 @@ def divisors(n):
 
     return count
 print(divisors(12))
+
+
+# Count the number of Duplicates
+# Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+# Example
+# "abcde" -> 0  # no characters repeats more than once
+# "aabbcde" -> 2  # 'a' and 'b'
+def duplicate_count(text):
+    # Your code goes here
+    text = text.lower()
+    count = {}
+    for t in text:
+        if t in count:
+            count[t] +=1 
+        else:
+            count[t] = 1
+    duplicate_count = 0
+    for key in count:
+        if count[key] > 1:
+            duplicate_count += 1
+    return duplicate_count
+print(duplicate_count('abbcc'))
