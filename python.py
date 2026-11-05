@@ -419,3 +419,19 @@ def basic_op(operator, value1, value2):
     elif operator == '/':
         return value1 / value2
 print(basic_op('+', 5, 5))
+
+
+a = 256
+b = 256
+print(a is b)
+
+x = 257
+y = 257
+
+print(x is y)
+
+
+print(bool([]))
+print(bool([0]))
+print(bool(""))
+print(bool(" "))

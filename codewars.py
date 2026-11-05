@@ -363,3 +363,34 @@ def count_positives_sum_negatives(arr):
             negative += i
     return [positive, negative]
 print(count_positives_sum_negatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+
+
+# Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+
+# If no occurrences can be found, a count of 0 should be returned.
+
+# ("Hello", 'o')  =>  1
+# ("Hello", 'l')  =>  2
+# ("", 'z')       =>  0
+def str_count(string, letter):
+    # Your code here ;
+    result = 0
+                                                    # unsolved
+    if letter in string:
+        for s in string:
+            result += 1
+        else:
+            return 0
+    return result
+print(str_count("hello", 'l'))
+
+
+
+def evenOdd(x):
+    if x % 2 == 0:
+        return 'even'
+    else:
+        return 'odd'
+
+print(evenOdd(13))
+print(evenOdd(2))
