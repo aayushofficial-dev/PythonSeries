@@ -393,3 +393,35 @@ def evenOdd(x):
 
 print(evenOdd(13))
 print(evenOdd(2))
+
+# Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative. If the array is empty, return 0.
+
+# Examples
+
+# Input: [1, 5.2, 4, 0, -1]
+# Output: 9.2
+def sum_array(a):
+    result = 0
+    for i in a:
+        result += i
+    return result
+print(sum_array([1, 5.2, 4, 0, -1]))
+
+
+# Count the number of divisors of a positive integer n.
+
+# Random tests go up to n = 500000, but fixed tests go higher.
+
+# Examples (input --> output)
+
+# 4 --> 3 // we have 3 divisors - 1, 2 and 4
+# 5 --> 2 // we have 2 divisors - 1 and 5
+def divisors(n):
+    count = 0
+
+    for i in range(1, n + 1):
+        if n % i == 0:
+            count += 1
+
+    return count
+print(divisors(12))
