@@ -375,14 +375,13 @@ print(count_positives_sum_negatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -1
 def str_count(string, letter):
     # Your code here ;
     result = 0
-                                                    # unsolved
-    if letter in string:
-        for s in string:
+                                                    # solved
+    for s in string:
+        if s == letter:
             result += 1
-        else:
-            return 0
     return result
-print(str_count("hello", 'l'))
+
+print(str_count("hello", 'o'))
 
 
 
