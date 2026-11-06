@@ -447,3 +447,37 @@ def duplicate_count(text):
             duplicate_count += 1
     return duplicate_count
 print(duplicate_count('abbcc'))
+
+
+# Your function takes two arguments:
+
+# current father's age (years)
+# current age of his son (years)
+# Calculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old). The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
+
+def twice_as_old(dad_years_old, son_years_old):
+    years = 0
+    
+#     If the father is currently more than twice as old as the son,
+#     we look into the future(or past, depending on perspective)
+    if dad_years_old > son_years_old *2:
+        while dad_years_old != son_years_old * 2:
+            dad_years_old += 1
+            son_years_old += 1
+            years += 1
+            
+#     if the father is currently less than twich as old as the son,
+#     we look into the past
+    elif dad_years_old < son_years_old * 2:
+        while dad_years_old != son_years_old * 2:
+            dad_years_old -= 1
+            son_years_old -= 1
+            years += 1
+    
+    return years
+print(twice_as_old(36,7))
+
+
+def twice_as_old(dad_years_old, son_years_old):
+    return abs(dad_years_old - 2 * son_years_old)
+print(twice_as_old(36, 7))
