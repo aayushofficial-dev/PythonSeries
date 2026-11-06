@@ -481,3 +481,15 @@ print(twice_as_old(36,7))
 def twice_as_old(dad_years_old, son_years_old):
     return abs(dad_years_old - 2 * son_years_old)
 print(twice_as_old(36, 7))
+
+# A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+# Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+def is_pangram(st):
+    st = st.lower()
+    string = 'abcdefghijklmnopqrstuvwxyz'
+    for char in string:
+        if char not in st:
+            return False
+    return True
+print(is_pangram('The quick brown fox jumps over the lazy dog'))
