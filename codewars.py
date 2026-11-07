@@ -510,3 +510,19 @@ def xo(s):
         return False
     # return x, o
 print(xo('xXoo'))
+
+
+# removing elements
+# Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+# Example:
+
+# ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+def remove_every_other(my_list):
+    result = []
+    for i, x in enumerate(my_list):
+        if i % 2 == 0:
+            result.append(x)
+    return result
+print(remove_every_other(["Keep", "Remove", "Keep", "Remove", "Keep"]))
