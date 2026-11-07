@@ -493,3 +493,20 @@ def is_pangram(st):
             return False
     return True
 print(is_pangram('The quick brown fox jumps over the lazy dog'))
+
+# exes and ohs
+def xo(s):
+    x = 0
+    o = 0 
+    for a in s:
+        if a.lower() == 'x':
+            x += 1
+        elif a.lower() == 'o':
+            o += 1
+
+    if x == o:
+        return True
+    else:
+        return False
+    # return x, o
+print(xo('xXoo'))
