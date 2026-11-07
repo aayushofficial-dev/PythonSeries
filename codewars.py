@@ -539,3 +539,30 @@ def get_count(sentence):
             vowel_count += 1
     return vowel_count
 print(get_count('aayush'))
+
+
+name = ['aayush', 'rizan', 'ronak', 'ronash']
+pos = name.index('ronak')
+print(pos * 3)
+print(pos)
+
+for i, x in enumerate(name, start=1):
+    print(i, x)
+
+a = ['Python', 'Java', 'C++', 'Go']
+print(a[:])
+
+li = list(range(100, 110))
+print(li.index(105))
+
+a = [10, 20, 30, 40, 50]
+b = [1, 2, 3, 4, 5]
+res = []
+
+for x, y in zip(a, b):
+    res.append(x - y)
+
+print(res)
+
+li = ['a', 'b', 'c', 'd', 'e']
+print(li[10:])
