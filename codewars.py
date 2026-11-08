@@ -590,3 +590,11 @@ print(cockroach_speed(1.08))
 def repeat_str(repeat, string):
     return string * repeat
 print(repeat_str(6, 'hello'))
+
+# check even or odd
+def even_or_odd(number):
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+print(even_or_odd(22))
