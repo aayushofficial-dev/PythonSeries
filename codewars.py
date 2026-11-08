@@ -566,3 +566,17 @@ print(res)
 
 li = ['a', 'b', 'c', 'd', 'e']
 print(li[10:])
+
+# The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+# For example:
+# 1.08 --> 30
+
+def cockroach_speed(s):
+    # Good Luck!
+    km = 27.7777778
+    result = 0
+    if s >= 0:
+        res = s * km
+        result += res
+    return int(result)
+print(cockroach_speed(1.08))
