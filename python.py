@@ -262,7 +262,7 @@ def to_alternating_case(string):
         else:
             result += s.lower()
     return result
-print(to_alternating_case('hello aayush'))
+print(to_alternating_case('hello Aayush'))
 
 a = b = c = 100
 del a
@@ -442,6 +442,3 @@ for i in range(5):
         continue
     else:
         print(i)
-
-def twice_as_old(dad_years_old, son_years_old):
-    return abs(dad_years_old - 2 * son_years_old)
