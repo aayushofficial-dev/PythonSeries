@@ -635,3 +635,28 @@ def filter_list(l):
             result.append(a)
     return result
 print(filter_list([1,2,'a','b']))
+
+
+# Is the string uppercase?
+# Task
+# Create a method to see whether the string is ALL CAPS.
+# Examples (input -> output)
+
+# "c" -> False
+# "C" -> True
+# "hello I AM DONALD" -> False
+# "HELLO I AM DONALD" -> True
+# "ACSKLDFJSgSKLDFJSKLDFJ" -> False
+# "ACSKLDFJSGSKLDFJSKLDFJ" -> True
+def is_uppercase(inp):
+    if inp == inp.upper():
+        return True
+    else:
+        return False
+print(is_uppercase('HELLO@'))
+
+# another approach
+def is_uppercase(inp):
+    return inp == inp.upper()
+print(is_uppercase('HELLO@'))
+
