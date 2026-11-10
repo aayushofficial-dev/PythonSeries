@@ -442,3 +442,12 @@ for i in range(5):
         continue
     else:
         print(i)
+
+# Global and local variables
+msg = 'Aayush is the best tech engineer.'
+
+def display():
+    print('Inside function:', msg)
+display()
+print('Outside function:', msg)
+
