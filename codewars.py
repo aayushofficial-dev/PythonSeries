@@ -688,3 +688,12 @@ def sort_array(source_array):
             result.append(num)
     return result
 print(sort_array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0] ))
+
+# Find the unique number
+
+def find_uniq(xs):
+    s = set(xs)
+    for x in s:
+        if xs.count(x) == 1:
+            return x
+print(find_uniq([ 1, 1, 1, 2, 1, 1 ]))
