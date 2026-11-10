@@ -700,12 +700,14 @@ print(find_uniq([ 1, 1, 1, 2, 1, 1 ]))
 
 # student's final grade
 def final_grade(grade, project):
-    if grade >= 90 or project >= 10:
+    if grade > 90 or project > 10:
         return 100
-    elif grade >= 75 and project >= 5 and project < 10:
+    elif grade > 75 and project >= 5:
         return 90
-    elif grade >= 50 and project > 0 and project < 5:
+    elif grade > 50 and project >= 2:
         return 75
     else:
         return 0
-print(final_grade(20, 2))
+print(final_grade(100, 12))
+    
+
