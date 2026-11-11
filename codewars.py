@@ -711,3 +711,30 @@ def final_grade(grade, project):
 print(final_grade(100, 12))
     
 
+# welcome
+def greet(language):
+    # your code here
+    lang = [ ("english", "Welcome")
+            , ("czech", "Vitejte")
+            , ("danish", "Velkomst")
+            , ("dutch", "Welkom")
+            , ("estonian", "Tere tulemast")
+            , ("finnish", "Tervetuloa")
+            , ("flemish", "Welgekomen")
+            , ("french", "Bienvenue")
+            , ("german", "Willkommen")
+            , ("irish", "Failte")
+            , ("italian", "Benvenuto")
+            , ("latvian", "Gaidits")
+            , ("lithuanian", "Laukiamas")
+            , ("polish", "Witamy")
+            , ("spanish", "Bienvenido")
+            , ("swedish", "Valkommen")
+            , ("welsh", "Croeso")
+            ]
+    
+    for l in lang:
+        if l[0] == language:
+            return l[1]
+    return "Welcome"
+print(greet('Welcome'))
