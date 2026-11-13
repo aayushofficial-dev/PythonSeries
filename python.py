@@ -451,3 +451,15 @@ def display():
 display()
 print('Outside function:', msg)
 
+
+# *args and **kwargs in python
+def fun(*args):
+    return sum(args)
+
+print(fun(3, 10, 4))
+
+def fun(**kwargs):
+    for k, val in kwargs.items():
+        print(k, val)
+
+fun(a=1, b=2, c=3)
