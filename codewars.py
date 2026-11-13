@@ -797,6 +797,7 @@ def likes(names):
 print(likes(["Max", 'John', 'Mark', 'Aayush', 'Rizan']))
 
 
+# clean way to handle user input
 def do_this():
     print('Doing this')
 
@@ -810,3 +811,4 @@ match input('Do this or that?'):
         do_that()
     case _:
         print('Invalid input!')
+
