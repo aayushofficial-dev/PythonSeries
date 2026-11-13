@@ -798,17 +798,30 @@ print(likes(["Max", 'John', 'Mark', 'Aayush', 'Rizan']))
 
 
 # clean way to handle user input
-def do_this():
-    print('Doing this')
+# def do_this():
+#     print('Doing this')
 
-def do_that():
-    print('Doing that')
+# def do_that():
+#     print('Doing that')
 
-match input('Do this or that?'):
-    case 'this':
-        do_this()
-    case 'that':
-        do_that()
-    case _:
-        print('Invalid input!')
+# match input('Do this or that?'):
+#     case 'this':
+#         do_this()
+#     case 'that':
+#         do_that()
+#     case _:
+#         print('Invalid input!')
 
+# Duplicate encode
+def duplicate_encode(word):
+    #your code here
+    word = word.lower()
+    result = ""
+
+    for char in word:
+        if word.count(char) == 1:
+            result += '('
+        else:
+            result += ')'
+    return result
+print(duplicate_encode('aayush'))
