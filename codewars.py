@@ -825,3 +825,13 @@ def duplicate_encode(word):
             result += ')'
     return result
 print(duplicate_encode('aayush'))
+
+def better_than_average(class_points, your_points):
+    # Your code here
+    total_points = sum(class_points) + your_points
+    total_count = len(class_points) + 1
+
+    avg = total_points / total_count
+
+    return your_points > avg
+print(better_than_average([100, 40, 34, 57, 29, 72, 57, 88], 75))
