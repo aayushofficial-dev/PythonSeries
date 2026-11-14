@@ -837,14 +837,41 @@ def better_than_average(class_points, your_points):
 print(better_than_average([100, 40, 34, 57, 29, 72, 57, 88], 75))
 
 
-# Terminal game move function
-# In this game, the hero moves from left to right. The player rolls the die and moves the number of spaces indicated by the die two times.
-# Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
-# Example:
-# move(3, 6) should equal 15
+"""Terminal game move function
+In this game, the hero moves from left to right. The player rolls the die and moves the number of spaces indicated by the die two times.
+Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+Example:
+move(3, 6) should equal 15"""
 
 def move(position, roll):
     die = (roll * 2) + position
 
     return die
 print(move(3, 6))
+
+"""Binary Addition
+Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+
+The binary number returned should be a string.
+Examples:(Input1, Input2 --> Output (explanation)))
+1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)"""
+
+# using built-in method 
+def add_binary(a, b):
+    return bin(a + b)[2:]
+print(add_binary(5, 9))
+
+# another approach
+def add_binary(a, b):
+    total = a + b
+    if total == 0:
+        return '0'
+
+    binary_str = ""
+    while total > 0:
+        remainder = total % 2
+        binary_str = str(remainder) + binary_str
+        total = total // 2
+
+    return binary_str
+print(add_binary(1, 1))
