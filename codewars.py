@@ -875,3 +875,11 @@ def add_binary(a, b):
 
     return binary_str
 print(add_binary(1, 1))
+
+"""is_even"""
+def is_even(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+print(is_even(22))
