@@ -444,12 +444,11 @@ for i in range(5):
         print(i)
 
 # Global and local variables
-msg = 'Aayush is the best tech engineer.'
-
 def display():
+    msg = 'Aayush is the best tech engineer.'
     print('Inside function:', msg)
 display()
-print('Outside function:', msg)
+# print('Outside function:', msg)
 
 
 # *args and **kwargs in python
@@ -463,3 +462,13 @@ def fun(**kwargs):
         print(k, val)
 
 fun(a=1, b=2, c=3)
+
+"""Use of local and global variable:"""
+def fun():
+    s = 'mee too.'
+    # print(s)
+    return s
+
+s = 'I love python.'
+fun()
+print(s)
