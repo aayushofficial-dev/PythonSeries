@@ -472,3 +472,16 @@ def fun():
 s = 'I love python.'
 fun()
 print(s)
+
+"""Modifying global variable inside a function with global"""
+
+s = 'Python is great!'
+
+def fun():
+    global s
+    s += 'GFG' # modifying global variable
+    print(s)
+    s = 'Look for GFG python section'  # ressign global
+    print(s)
+fun()
+print(s)
