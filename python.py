@@ -485,3 +485,27 @@ def fun():
     print(s)
 fun()
 print(s)
+
+"""Global vs Local with same name"""
+a = 1 # Global variable
+
+def f():
+    print('f():', a) # uses global a
+
+def g():
+    a = 2 # local shadows global
+    print('g():', a)
+
+def h():
+    global a
+    a = 3 # Modifies global a 
+    print('h():', a)
+
+print("global:", a)
+f()
+print("global:", a)
+g()
+print("global:", a)
+h()
+print("global:", a)
+
