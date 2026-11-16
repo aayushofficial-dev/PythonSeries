@@ -944,3 +944,23 @@ def solution(nums):
     return nums
 print(solution([1,2,3,10,12,5,4]))
 
+
+"""Maximum subarray sum"""
+def max_sequence(arr):
+    if not arr:
+        return 0
+
+    current_max = 0
+    global_max = 0
+
+    for x in arr:
+        current_max = current_max + x
+
+        if current_max < 0:
+            current_max = 0
+
+        if current_max > global_max:
+            global_max = current_max
+
+    return global_max
+print(max_sequence([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
