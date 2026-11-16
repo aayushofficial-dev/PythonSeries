@@ -883,3 +883,40 @@ def is_even(n):
     else:
         return False
 print(is_even(22))
+
+
+"""Abbreviate a Two Word name
+Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+The output should be two capital letters with a dot separating them.
+
+It should look like this:
+
+Sam Harris => S.H
+patrick feeney => P.F
+"""
+
+def abbrev_name(name):
+    result = name[0].upper()
+
+    for i in range(len(name)):
+        if name[i] == ' ':
+            result += '.' + name[i + 1].upper()
+            break
+    return result
+
+print(abbrev_name('Aayush Shah'))
+
+"""5 without numbers!
+Write a function that always returns 5
+
+Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+
+Good luck :)
+"""
+
+def unusual_five():
+    return len('five!')
+print(unusual_five())
+
+
