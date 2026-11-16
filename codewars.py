@@ -920,3 +920,27 @@ def unusual_five():
 print(unusual_five())
 
 
+"""Sort Numbers
+Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
+
+For example:
+
+solution([1,2,3,10,5]) # should return [1,2,3,5,10]
+solution(None) # should return []
+"""
+
+def solution(nums):
+    if not nums:
+        return []
+
+    # We need a loop to go through the list multiple times
+    for i in range(len(nums)):
+        # Another loop to compare adjacent elements
+        for j in range(0, len(nums) - i - 1):
+            # condition: if the current element is greater than the next, swap them
+            if nums[j] > nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
+
+    return nums
+print(solution([1,2,3,10,12,5,4]))
+
