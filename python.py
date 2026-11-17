@@ -508,3 +508,13 @@ g()
 print("global:", a)
 h()
 print("global:", a)
+
+
+# Assign function to a variable
+
+def msg(name):
+    return f"hello {name}"
+
+f = msg
+
+print(f('Aayush'))
