@@ -1,39 +1,53 @@
-# import keyword
-# print('The list of keyword are:')
-# print(keyword.kwlist)
-
-a = [1, 2, 3, 4, 5]
-a.append(6)
-result = []
-for i in a:
-    total = i ** 2
-    result.append(total)
-print(result)
-
-# # number guessing game
 import random
 
-number = random.randint(1, 21)
-guesses = []
+attempts = 7
 
-for i in range(1, 6):
-    usr_input = int(input(f'guess the number. you have left with {i}/5 chances:'))
-    guesses.append(usr_input)
+def display_rules():
+    print('Welcome to Number Guessing Game!\n')
+    print('I have selected a number between 1 and 100.')
+    print('You have 7 attempts to guess it.\n')
 
-    if usr_input > number:
-        print('Your guess is too high.Try again!')
-    elif usr_input < number:
-        print('Your guess is too low.Try again!')
-    elif usr_input == number:
-        print(f'congratulations! you have guessed the number in {i} attempts.')
-else:
-    print(f'you are out of chances. The number was {number}')
-    print(f'Your guessed number was {guesses}')
+def play_game(number, attempt=1):
+    if attempt > attempts:
+        print('\nGame Over!')
+        print('The correct number was:', number)
+        return
+
+    guess = input(f'Attempt {attempt}/7 - Enter your guess:')
+
+    try:
+        guess = int(guess)
+
+    except ValueError:
+        print('Please enter a valid number.\n')
+        return play_game(number, attempt)
+
+    if guess < 1 or guess > 100:
+        print('Please enter a number between 1 and 100.\n')
+        return play_game(number, attempt)
+
+    check_guess = lambda x, y: "correct" if x == y else (
+        "low" if x < y else "high"
+    )
+
+    result = check_guess(guess, number)
+
+    if result == 'correct':
+        print('\nCongratulation! You guessed the correct number!')
+        print('You guessed it in', attempt, 'attempt(s)')
+        return 
+
+    if result == 'low':
+        print('Too Low! Try a higher number.\n')
+
+    else:
+        print('Too high! Try a lower number.\n')
+
+    play_game(number, attempt + 1)
 
 
-i = 'a'
-try:
-    if i == 1:
-        print('hello')
-except Exception as e:
-    print('error', e)
+display_rules()
+
+random_number = random.randint(1, 100)
+
+play_game(random_number)
