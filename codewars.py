@@ -964,3 +964,17 @@ def max_sequence(arr):
 
     return global_max
 print(max_sequence([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+
+# Super duper easy
+# Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+def problem(a):
+    
+    if isinstance(a, str):
+        return "Error"
+
+    else:
+        result = (a * 50) + 6
+        return result
+
+print(problem(6))
