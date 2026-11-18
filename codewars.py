@@ -978,3 +978,8 @@ def problem(a):
         return result
 
 print(problem(6))
+
+# Ronaldo Goals function 
+def goals(laLiga, copaDelRey, championsLeague):
+    return laLiga + copaDelRey + championsLeague
+print(goals(5, 10, 10))
