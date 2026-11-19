@@ -983,3 +983,15 @@ print(problem(6))
 def goals(laLiga, copaDelRey, championsLeague):
     return laLiga + copaDelRey + championsLeague
 print(goals(5, 10, 10))
+
+# What's the real floor?
+
+def get_real_floor(n):
+    # code here
+    if n <= 0:
+        return n
+    elif n < 13:
+        return n -1
+    else:
+        return n -2
+print(get_real_floor(14))
