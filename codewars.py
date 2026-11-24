@@ -1018,3 +1018,38 @@ def area_or_perimeter(l, w):
 
 print(area_or_perimeter(6, 10))
 print(area_or_perimeter(3, 3))
+
+
+# Rot 13
+
+# def rot13(message):
+#     result = chr((ord(message) - 65 + 13) % 26 + 65)
+#     # return result
+# print(rot13('codewars'))
+
+a = 65
+print(chr(a))
+
+# Find the middle element
+def gimme(input_array):
+    result = 0
+
+    for i, x in enumerate(input_array):
+        pass
+    
+    return result
+print(gimme([2, 3, 1]))
+
+a = 'hello'
+# a = 1984
+print(f'The user said says {a}')
+
+if isinstance(a, str):
+    print('Your msg is in string format.')
+
+else:
+    print('Your msg is an integer.')
+
+
+upper = lambda x: x.upper()
+print(upper(a))
