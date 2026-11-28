@@ -1106,3 +1106,12 @@ def delete_nth(order, max_e):
 
     return result
 print(delete_nth([1,2,3,1,2,1,2,3], 2))
+
+
+"""Reduce but Grow"""
+def grow(arr):
+    result = 1
+    for i in arr:
+        result *= i
+    return result
+print(grow([1,2,3,4]))
